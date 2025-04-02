@@ -1,21 +1,32 @@
 using ErrorLogger.Application;
 using ErrorLogger.Infrastructure;
 using ErrorLogger.WebApi.Middleware;
+using ErrorLogger.Core.Interfaces;
+using ErrorLogger.Infrastructure.Repositories;
+using ErrorLogger.Infrastructure.Services;
+using ErrorLogger.Application.Commands.LogError;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using MediatR;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Додаємо сервіси для контролерів
 builder.Services.AddControllers();
-
-// Додаємо Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
- 
-// Додаємо CORS
+
+// Реєстрація MediatR з усіх Assembly проекту
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(
+    Assembly.GetExecutingAssembly(),
+    Assembly.GetAssembly(typeof(LogErrorCommand))
+));
+
+builder.Services.AddScoped<IErrorRepository, ErrorRepository>();
+builder.Services.AddScoped<INotificationService, TelegramNotificationService>();
+
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(policy =>
@@ -26,18 +37,15 @@ builder.Services.AddCors(options =>
     });
 });
 
-// Додаємо шари з інших проектів
 builder.Services.AddApplicationServices();
 builder.Services.AddInfrastructureServices(builder.Configuration);
 
-// Налаштування логування
 builder.Logging.ClearProviders();
 builder.Logging.AddConsole();
 builder.Logging.AddDebug();
 
 var app = builder.Build();
 
-// Налаштування HTTP request pipeline
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
@@ -45,10 +53,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-// Використовуємо CORS
 app.UseCors();
-
-// Додаємо кастомне опрацювання помилок
 app.UseMiddleware<ErrorHandlingMiddleware>();
 
 app.UseHttpsRedirection();

@@ -46,3 +46,4 @@
 /Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
 /Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/obj/Debug/net9.0/ErrorLogger.WebApi.sourcelink.json

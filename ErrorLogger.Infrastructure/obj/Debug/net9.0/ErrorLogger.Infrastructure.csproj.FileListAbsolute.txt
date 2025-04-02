@@ -18,3 +18,4 @@
 /Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Infrastructure/obj/Debug/net9.0/refint/ErrorLogger.Infrastructure.dll
 /Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Infrastructure/obj/Debug/net9.0/ErrorLogger.Infrastructure.pdb
 /Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Infrastructure/obj/Debug/net9.0/ref/ErrorLogger.Infrastructure.dll
+/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Infrastructure/obj/Debug/net9.0/ErrorLogger.Infrastructure.sourcelink.json

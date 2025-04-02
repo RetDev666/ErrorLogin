@@ -16,3 +16,4 @@
 /Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Application/obj/Debug/net9.0/refint/ErrorLogger.Application.dll
 /Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Application/obj/Debug/net9.0/ErrorLogger.Application.pdb
 /Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Application/obj/Debug/net9.0/ref/ErrorLogger.Application.dll
+/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Application/obj/Debug/net9.0/ErrorLogger.Application.sourcelink.json
