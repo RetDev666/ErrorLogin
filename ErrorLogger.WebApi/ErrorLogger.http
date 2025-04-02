@@ -1,0 +1,6 @@
+@ErrorLogger_HostAddress = http://localhost:5057
+
+GET {{ErrorLogger_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

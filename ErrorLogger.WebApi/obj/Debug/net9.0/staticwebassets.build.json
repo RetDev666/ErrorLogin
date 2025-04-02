@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "pPHQCLQEVkrNg9oAX/LVkOVZn1v2Zj46zQrLdjhJi64=",
+  "Source": "ErrorLogger.WebApi",
+  "BasePath": "_content/ErrorLogger.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

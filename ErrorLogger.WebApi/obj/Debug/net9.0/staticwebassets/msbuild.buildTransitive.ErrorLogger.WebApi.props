@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/ErrorLogger.WebApi.props" />
+</Project>
