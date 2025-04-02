@@ -5,9 +5,6 @@
 /Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/obj/Debug/net9.0/ErrorLogger.WebApi.csproj.CoreCompileInputs.cache
 /Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/obj/Debug/net9.0/ErrorLogger.WebApi.MvcApplicationPartsAssemblyInfo.cs
 /Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/obj/Debug/net9.0/ErrorLogger.WebApi.MvcApplicationPartsAssemblyInfo.cache
-/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/bin/Debug/net9.0/ErrorLogger.Core.deps.json
-/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/bin/Debug/net9.0/ErrorLogger.Core.runtimeconfig.json
-/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/bin/Debug/net9.0/ErrorLogger.Core
 /Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/bin/Debug/net9.0/appsettings.Development.json
 /Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/bin/Debug/net9.0/appsettings.json
 /Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/bin/Debug/net9.0/ErrorLogger.WebApi.staticwebassets.endpoints.json
@@ -18,14 +15,9 @@
 /Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/bin/Debug/net9.0/ErrorLogger.WebApi.pdb
 /Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/bin/Debug/net9.0/MediatR.dll
 /Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/bin/Debug/net9.0/MediatR.Contracts.dll
-/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/bin/Debug/net9.0/Microsoft.AspNetCore.OpenApi.dll
 /Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/bin/Debug/net9.0/Microsoft.OpenApi.dll
 /Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/bin/Debug/net9.0/Telegram.Bot.dll
-/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/bin/Debug/net9.0/ErrorLogger.Application.dll
-/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/bin/Debug/net9.0/ErrorLogger.Core.dll
 /Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/bin/Debug/net9.0/ErrorLogger.Infrastructure.dll
-/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/bin/Debug/net9.0/ErrorLogger.Core.pdb
-/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/bin/Debug/net9.0/ErrorLogger.Application.pdb
 /Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/bin/Debug/net9.0/ErrorLogger.Infrastructure.pdb
 /Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/obj/Debug/net9.0/scopedcss/bundle/ErrorLogger.WebApi.styles.css
 /Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/obj/Debug/net9.0/staticwebassets.build.json
@@ -47,5 +39,7 @@
 /Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
 /Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/obj/Debug/net9.0/ErrorLogger.WebApi.sourcelink.json
+/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/bin/Debug/net9.0/ErrorLogger.Domain.dll
+/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/bin/Debug/net9.0/ErrorLogger.Domain.pdb
 /Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/bin/Debug/net9.0/ErrorLogger.WebApi.xml
 /Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/obj/Debug/net9.0/ErrorLogger.WebApi.xml

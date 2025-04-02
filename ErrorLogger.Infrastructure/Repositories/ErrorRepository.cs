@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using ErrorLogger.Core.Interfaces;
-using ErrorLogger.Core.Models;
+using ErrorLogger.Domain.Interfaces;
+using ErrorLogger.Domain.Models;
 
 namespace ErrorLogger.Infrastructure.Repositories
 {

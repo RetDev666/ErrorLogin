@@ -1,11 +1,7 @@
 using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-using ErrorLogger.Core.Interfaces;
-using ErrorLogger.Core.Models;
+using ErrorLogger.Domain.Interfaces;
+using ErrorLogger.Domain.Models;
 using Microsoft.Extensions.Logging;
 
 namespace ErrorLogger.Infrastructure.Persistence

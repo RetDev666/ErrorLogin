@@ -1,13 +1,8 @@
-using System;
-using System.Threading.Tasks;
-using ErrorLogger.Application.Commands.LogError;
-using ErrorLogger.Application.Queries.GetAllErrors;
-using ErrorLogger.Application.Queries.GetErrorById;
-using ErrorLogger.Core.Models;
+using ErrorLogger.Domain.Commands;
+using ErrorLogger.Domain.Models;
+using ErrorLogger.Domain.Queries;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
 namespace ErrorLogger.WebApi.Controllers
 {

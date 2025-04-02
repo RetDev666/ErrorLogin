@@ -1,0 +1,13 @@
+/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Domain/bin/Debug/net9.0/ErrorLogger.Domain.deps.json
+/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Domain/bin/Debug/net9.0/ErrorLogger.Domain.dll
+/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Domain/bin/Debug/net9.0/ErrorLogger.Domain.pdb
+/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Domain/obj/Debug/net9.0/ErrorLogger.Domain.csproj.AssemblyReference.cache
+/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Domain/obj/Debug/net9.0/ErrorLogger.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Domain/obj/Debug/net9.0/ErrorLogger.Domain.AssemblyInfoInputs.cache
+/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Domain/obj/Debug/net9.0/ErrorLogger.Domain.AssemblyInfo.cs
+/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Domain/obj/Debug/net9.0/ErrorLogger.Domain.csproj.CoreCompileInputs.cache
+/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Domain/obj/Debug/net9.0/ErrorLogger.Domain.sourcelink.json
+/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Domain/obj/Debug/net9.0/ErrorLogger.Domain.dll
+/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Domain/obj/Debug/net9.0/refint/ErrorLogger.Domain.dll
+/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Domain/obj/Debug/net9.0/ErrorLogger.Domain.pdb
+/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Domain/obj/Debug/net9.0/ref/ErrorLogger.Domain.dll

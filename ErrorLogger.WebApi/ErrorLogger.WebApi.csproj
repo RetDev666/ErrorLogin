@@ -3,18 +3,19 @@
         <TargetFramework>net9.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
-        <RootNamespace>ErrorLogger</RootNamespace>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <NoWarn>$(NoWarn);1591</NoWarn>
     </PropertyGroup>
+
     <ItemGroup>
         <PackageReference Include="MediatR" Version="12.5.0" />
-        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.2" />
-    </ItemGroup>
-    <ItemGroup>
-        <ProjectReference Include="..\ErrorLogger.Core\ErrorLogger.Core.csproj" />
-        <ProjectReference Include="..\ErrorLogger.Application\ErrorLogger.Application.csproj" />
-        <ProjectReference Include="..\ErrorLogger.Infrastructure\ErrorLogger.Infrastructure.csproj" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\ErrorLogger.Domain\ErrorLogger.Domain.csproj" />
+        <ProjectReference Include="..\ErrorLogger.Infrastructure\ErrorLogger.Infrastructure.csproj" />
     </ItemGroup>
 </Project>

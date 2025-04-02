@@ -10,7 +10,6 @@
         <PackageReference Include="Telegram.Bot" Version="22.0.0" />
     </ItemGroup>
     <ItemGroup>
-        <ProjectReference Include="..\ErrorLogger.Core\ErrorLogger.Core.csproj" />
-        <ProjectReference Include="..\ErrorLogger.Application\ErrorLogger.Application.csproj" />
+      <ProjectReference Include="..\ErrorLogger.Domain\ErrorLogger.Domain.csproj" />
     </ItemGroup>
 </Project>

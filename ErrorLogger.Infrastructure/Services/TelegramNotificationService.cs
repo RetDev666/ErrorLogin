@@ -1,8 +1,5 @@
-using System;
-using System.Threading;
-using System.Threading.Tasks;
-using ErrorLogger.Core.Interfaces;
-using ErrorLogger.Core.Models;
+using ErrorLogger.Domain.Interfaces;
+using ErrorLogger.Domain.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Telegram.Bot;

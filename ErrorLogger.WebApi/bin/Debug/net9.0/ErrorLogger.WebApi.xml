@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ErrorLogger.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:ErrorLogger.WebApi.Controllers.ErrorsController">
+            <summary>
+            Контролер для управління системними помилками
+            </summary>
+        </member>
+        <member name="M:ErrorLogger.WebApi.Controllers.ErrorsController.#ctor(MediatR.IMediator,Microsoft.Extensions.Logging.ILogger{ErrorLogger.WebApi.Controllers.ErrorsController})">
+            <summary>
+            Конструктор контролера помилок
+            </summary>
+            <param name="mediator">Медіатор для обробки команд</param>
+            <param name="logger">Логер для реєстрації подій</param>
+        </member>
+        <member name="M:ErrorLogger.WebApi.Controllers.ErrorsController.LogError(ErrorLogger.Domain.Commands.LogErrorCommand)">
+            <summary>
+            Реєстрація нової помилки в системі
+            </summary>
+            <param name="command">Дані про помилку</param>
+            <returns>Результат реєстрації помилки</returns>
+        </member>
+        <member name="M:ErrorLogger.WebApi.Controllers.ErrorsController.GetError(System.Guid)">
+            <summary>
+            Отримання деталей конкретної помилки за її ідентифікатором
+            </summary>
+            <param name="id">Унікальний ідентифікатор помилки</param>
+            <returns>Деталі помилки</returns>
+        </member>
+        <member name="M:ErrorLogger.WebApi.Controllers.ErrorsController.GetAllErrors">
+            <summary>
+            Отримання списку всіх зареєстрованих помилок
+            </summary>
+            <returns>Колекція помилок</returns>
+        </member>
+    </members>
+</doc>

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ErrorLogger.WebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0246142e1fc04dcfc624f4b5e887d2796f74ecbc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d0084ebbc0dfc8dc5be9b35b2a10068ead08a896")]
 [assembly: System.Reflection.AssemblyProductAttribute("ErrorLogger.WebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ErrorLogger.WebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,4 +1,4 @@
-﻿using ErrorLogger.Core.Interfaces;
+﻿using ErrorLogger.Domain.Interfaces;
 using ErrorLogger.Infrastructure.Persistence;
 using ErrorLogger.Infrastructure.Services;
 using Microsoft.Extensions.Configuration;
