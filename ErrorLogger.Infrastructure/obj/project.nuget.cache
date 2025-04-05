@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "bOwhQoHniRg=",
+  "dgSpecHash": "TtXo4/bk9NA=",
   "success": true,
   "projectFilePath": "/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Infrastructure/ErrorLogger.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "/Users/mac/.nuget/packages/automapper/14.0.0/automapper.14.0.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/mediatr/12.5.0/mediatr.12.5.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.extensions.configuration.abstractions/9.0.0/microsoft.extensions.configuration.abstractions.9.0.0.nupkg.sha512",

@@ -6,16 +6,16 @@ namespace ErrorLogger.Domain.Queries
 {
     public class GetErrorByIdQueryHandler : IRequestHandler<GetErrorByIdQuery, Error?>
     {
-        private readonly IErrorRepository _errorRepository;
+        private readonly IErrorRepository errorRepository;
 
         public GetErrorByIdQueryHandler(IErrorRepository errorRepository)
         {
-            _errorRepository = errorRepository;
+            this.errorRepository = errorRepository;
         }
 
         public async Task<Error?> Handle(GetErrorByIdQuery request, CancellationToken cancellationToken)
         {
-            return await _errorRepository.GetErrorByIdAsync(request.Id, cancellationToken);
+            return await errorRepository.GetErrorByIdAsync(request.Id, cancellationToken);
         }
     }
 }

@@ -6,15 +6,15 @@ namespace ErrorLogger.Domain.Commands
 {
     public class LogErrorCommandHandler : IRequestHandler<LogErrorCommand, Guid>
     {
-        private readonly IErrorRepository _errorRepository;
-        private readonly INotificationService _notificationService;
+        private readonly IErrorRepository errorRepository;
+        private readonly INotificationService notificationService;
 
         public LogErrorCommandHandler(
             IErrorRepository errorRepository, 
             INotificationService notificationService)
         {
-            _errorRepository = errorRepository;
-            _notificationService = notificationService;
+            this.errorRepository = errorRepository;
+            this.notificationService = notificationService;
         }
 
         public async Task<Guid> Handle(LogErrorCommand request, CancellationToken cancellationToken)
@@ -27,8 +27,8 @@ namespace ErrorLogger.Domain.Commands
                 StatusCode = request.StatusCode
             };
 
-            var errorId = await _errorRepository.SaveErrorAsync(error, cancellationToken);
-            await _notificationService.SendErrorNotificationAsync(error, cancellationToken);
+            var errorId = await errorRepository.SaveErrorAsync(error, cancellationToken);
+            await notificationService.SendErrorNotificationAsync(error, cancellationToken);
 
             return errorId;
         }

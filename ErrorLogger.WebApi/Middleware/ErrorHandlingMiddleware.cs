@@ -7,29 +7,29 @@ namespace ErrorLogger.WebApi.Middleware
 {
     public class ErrorHandlingMiddleware
     {
-        private readonly RequestDelegate _next;
-        private readonly ILogger<ErrorHandlingMiddleware> _logger;
-        private readonly IMediator _mediator;
+        private readonly RequestDelegate next;
+        private readonly ILogger<ErrorHandlingMiddleware> logger;
+        private readonly IMediator mediator;
 
         public ErrorHandlingMiddleware(
             RequestDelegate next, 
             ILogger<ErrorHandlingMiddleware> logger,
             IMediator mediator)
         {
-            _next = next;
-            _logger = logger;
-            _mediator = mediator;
+            this.next = next;
+            this.logger = logger;
+            this.mediator = mediator;
         }
 
         public async Task InvokeAsync(HttpContext context)
         {
             try
             {
-                await _next(context);
+                await next(context);
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Необроблена помилка: {ErrorMessage}", ex.Message);
+                logger.LogError(ex, "Необроблена помилка: {ErrorMessage}", ex.Message);
                 await HandleExceptionAsync(context, ex);
             }
         }
@@ -43,7 +43,7 @@ namespace ErrorLogger.WebApi.Middleware
             // Логуємо помилку через MediatR/CQRS для відправки в Telegram
             try
             {
-                await _mediator.Send(new LogErrorCommand
+                await mediator.Send(new LogErrorCommand
                 {
                     Message = exception.Message,
                     StackTrace = exception.StackTrace,
@@ -53,7 +53,7 @@ namespace ErrorLogger.WebApi.Middleware
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Помилка при спробі зареєструвати помилку через MediatR");
+                logger.LogError(ex, "Помилка при спробі зареєструвати помилку через MediatR");
             }
 
             // Формуємо відповідь

@@ -8,27 +8,27 @@ namespace ErrorLogger.Infrastructure.Services
 {
     public class TelegramNotificationService : INotificationService
     {
-        private readonly ILogger<TelegramNotificationService> _logger;
-        private readonly TelegramBotClient _botClient;
-        private readonly string _chatId;
+        private readonly ILogger<TelegramNotificationService> logger;
+        private readonly TelegramBotClient botClient;
+        private readonly string chatId;
 
         public TelegramNotificationService(
             IConfiguration configuration,
             ILogger<TelegramNotificationService> logger)
         {
-            _logger = logger;
+            this.logger = logger;
 
             var botToken = configuration["Telegram:BotToken"];
-            _chatId = configuration["Telegram:ChatId"];
+            chatId = configuration["Telegram:ChatId"];
 
-            if (string.IsNullOrEmpty(botToken) || string.IsNullOrEmpty(_chatId))
+            if (string.IsNullOrEmpty(botToken) || string.IsNullOrEmpty(chatId))
             {
-                _logger.LogError("Відсутня конфігурація Telegram-бота");
+                this.logger.LogError("Відсутня конфігурація Telegram-бота");
                 throw new ArgumentException("Telegram-бот не сконфігурований. Перевірте appsettings.json");
             }
 
-            _botClient = new TelegramBotClient(botToken);
-            _logger.LogInformation("TelegramNotificationService ініціалізовано з ID чату: {ChatId}", _chatId);
+            botClient = new TelegramBotClient(botToken);
+            this.logger.LogInformation("TelegramNotificationService ініціалізовано з ID чату: {ChatId}", chatId);
         }
 
         public async Task<bool> SendErrorNotificationAsync(Error error, CancellationToken cancellationToken = default)
@@ -36,19 +36,19 @@ namespace ErrorLogger.Infrastructure.Services
             try
             {
                 var message = FormatErrorMessage(error);
-                await _botClient.SendTextMessageAsync(
-                    chatId: _chatId,
+                await botClient.SendTextMessageAsync(
+                    chatId: chatId,
                     text: message,
                     parseMode: Telegram.Bot.Types.Enums.ParseMode.Markdown,
                     cancellationToken: cancellationToken
                 );
                 
-                _logger.LogInformation("Повідомлення про помилку успішно відправлено в Telegram: {ErrorId}", error.Id);
+                logger.LogInformation("Повідомлення про помилку успішно відправлено в Telegram: {ErrorId}", error.Id);
                 return true;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Помилка відправки повідомлення в Telegram: {ErrorMessage}", ex.Message);
+                logger.LogError(ex, "Помилка відправки повідомлення в Telegram: {ErrorMessage}", ex.Message);
                 return false;
             }
         }

@@ -15,8 +15,8 @@ namespace ErrorLogger.WebApi.Controllers
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     public class ErrorsController : ControllerBase
     {
-        private readonly IMediator _mediator;
-        private readonly ILogger<ErrorsController> _logger;
+        private readonly IMediator mediator;
+        private readonly ILogger<ErrorsController> logger;
 
         /// <summary>
         /// Конструктор контролера помилок
@@ -25,8 +25,8 @@ namespace ErrorLogger.WebApi.Controllers
         /// <param name="logger">Логер для реєстрації подій</param>
         public ErrorsController(IMediator mediator, ILogger<ErrorsController> logger)
         {
-            _mediator = mediator;
-            _logger = logger;
+            this.mediator = mediator;
+            this.logger = logger;
         }
 
         /// <summary>
@@ -42,7 +42,7 @@ namespace ErrorLogger.WebApi.Controllers
         {
             try
             {
-                var result = await _mediator.Send(command);
+                var result = await mediator.Send(command);
                 return Ok(new { 
                     Id = result, 
                     Message = "Помилку успішно зареєстровано та відправлено в Telegram" 
@@ -50,7 +50,7 @@ namespace ErrorLogger.WebApi.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Помилка при обробці запиту на реєстрацію помилки");
+                logger.LogError(ex, "Помилка при обробці запиту на реєстрацію помилки");
                 return StatusCode(500, new { 
                     Message = "Внутрішня помилка сервера", 
                     Error = ex.Message 
@@ -71,7 +71,7 @@ namespace ErrorLogger.WebApi.Controllers
         {
             try
             {
-                var error = await _mediator.Send(new GetErrorByIdQuery { Id = id });
+                var error = await mediator.Send(new GetErrorByIdQuery { Id = id });
                 if (error == null)
                 {
                     return NotFound(new { 
@@ -82,7 +82,7 @@ namespace ErrorLogger.WebApi.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Помилка при отриманні помилки з ID {ErrorId}", id);
+                logger.LogError(ex, "Помилка при отриманні помилки з ID {ErrorId}", id);
                 return StatusCode(500, new { 
                     Message = "Внутрішня помилка сервера", 
                     Error = ex.Message 
@@ -101,12 +101,12 @@ namespace ErrorLogger.WebApi.Controllers
         {
             try
             {
-                var errors = await _mediator.Send(new GetAllErrorsQuery());
+                var errors = await mediator.Send(new GetAllErrorsQuery());
                 return Ok(errors);
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Помилка при отриманні списку помилок");
+                logger.LogError(ex, "Помилка при отриманні списку помилок");
                 return StatusCode(500, new { 
                     Message = "Внутрішня помилка сервера", 
                     Error = ex.Message 
