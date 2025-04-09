@@ -1,11 +1,13 @@
-using Microsoft.AspNetCore.DataProtection;
 using Microsoft.OpenApi.Models;
 using ErrorLogger.Domain.Interfaces;
 using ErrorLogger.Domain.Commands;
-using ErrorLogger.Infrastructure.Repositories;
 using ErrorLogger.Infrastructure.Services;
 using ErrorLogger.WebApi.Middleware;
 using System.Reflection;
+using ErrorLogger.Domain.Mappings;
+using ErrorLogger.Infrastructure.Mappings;
+using ErrorLogger.WebApi.Mappings;
+using ErrorLogger.Infrastructure.Persistence;
 
 namespace ErrorLogger.WebApi
 {
@@ -20,15 +22,21 @@ namespace ErrorLogger.WebApi
 
         public void ConfigureServices(IServiceCollection services)
         {
-            // Додайте DataProtection
-            services.AddDataProtection();
-    
-            // Реєстрація служби шифрування
-            services.AddScoped<SecureTokenService>();
-
+            // Базові сервіси
             services.AddControllers();
             services.AddEndpointsApiExplorer();
 
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(policy =>
+                {
+                    policy.AllowAnyOrigin()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });
+            });
+
+            // Swagger
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo 
@@ -43,27 +51,36 @@ namespace ErrorLogger.WebApi
                 c.IncludeXmlComments(xmlPath);
             });
 
+            // AutoMapper - реєструємо тільки один раз!
+            services.AddAutoMapper(config => 
+            {
+                config.AddProfile<ErrorMapperProfile>();
+                config.AddProfile<ApiMappingProfile>();
+                config.AddProfile<InfrastructureMappingProfile>();
+            });
+            
+            // MediatR
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(
                 Assembly.GetExecutingAssembly(),
                 Assembly.GetAssembly(typeof(LogErrorCommand))
             ));
 
-            services.AddScoped<IErrorRepository, ErrorRepository>();
+            // Репозиторії та сервіси
+            // Змінено з ErrorRepository на InMemoryErrorRepository 
+            services.AddSingleton<IErrorRepository, InMemoryErrorRepository>();
             services.AddScoped<INotificationService, TelegramNotificationService>();
-
-            services.AddCors(options =>
-            {
-                options.AddDefaultPolicy(policy =>
-                {
-                    policy.AllowAnyOrigin()
-                        .AllowAnyHeader()
-                        .AllowAnyMethod();
-                });
-            });
+            
+            // DataProtection і безпека
+            services.AddDataProtection();
+            services.AddScoped<SecureTokenService>();
+            
+            // Додавання логування
+            services.AddLogging();
         }
 
         public void Configure(WebApplication app)
         {
+            // Налаштування для розробки
             if (app.Environment.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -71,16 +88,22 @@ namespace ErrorLogger.WebApi
                 app.UseSwaggerUI(c => 
                 {
                     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Error Logger API V1");
+                    c.EnableDeepLinking();
+                    c.DisplayRequestDuration();
                 });
             }
 
+            // CORS повинен бути перед маршрутизацією
             app.UseCors();
+            
+            // Обробка помилок
             app.UseMiddleware<ErrorHandlingMiddleware>();
 
+            // Базова маршрутизація
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseAuthorization();
-
+            
             app.MapControllers();
         }
     }

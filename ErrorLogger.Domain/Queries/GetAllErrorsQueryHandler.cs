@@ -1,21 +1,25 @@
+using AutoMapper;
+using ErrorLogger.Domain.DTOs;
 using ErrorLogger.Domain.Interfaces;
-using ErrorLogger.Domain.Models;
 using MediatR;
 
 namespace ErrorLogger.Domain.Queries
 {
-    public class GetAllErrorsQueryHandler : IRequestHandler<GetAllErrorsQuery, IEnumerable<Error>>
+    public class GetAllErrorsQueryHandler : IRequestHandler<GetAllErrorsQuery, IEnumerable<ErrorDto>>
     {
         private readonly IErrorRepository errorRepository;
+        private readonly IMapper mapper;
 
-        public GetAllErrorsQueryHandler(IErrorRepository errorRepository)
+        public GetAllErrorsQueryHandler(IErrorRepository errorRepository, IMapper mapper)
         {
             this.errorRepository = errorRepository;
+            this.mapper = mapper;
         }
 
-        public async Task<IEnumerable<Error>> Handle(GetAllErrorsQuery request, CancellationToken cancellationToken)
+        public async Task<IEnumerable<ErrorDto>> Handle(GetAllErrorsQuery request, CancellationToken cancellationToken)
         {
-            return await errorRepository.GetAllErrorsAsync(cancellationToken);
+            var errors = await errorRepository.GetAllErrorsAsync(cancellationToken);
+            return mapper.Map<IEnumerable<ErrorDto>>(errors);
         }
     }
 }

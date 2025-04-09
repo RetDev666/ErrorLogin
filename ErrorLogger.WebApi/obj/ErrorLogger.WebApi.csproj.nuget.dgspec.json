@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/ErrorLogger.WebApi.csproj": {}
+    "/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.WebApi/ErrorLogger.WebApi.csproj": {}
   },
   "projects": {
-    "/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Domain/ErrorLogger.Domain.csproj": {
+    "/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Domain/ErrorLogger.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Domain/ErrorLogger.Domain.csproj",
+        "projectUniqueName": "/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Domain/ErrorLogger.Domain.csproj",
         "projectName": "ErrorLogger.Domain",
-        "projectPath": "/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Domain/ErrorLogger.Domain.csproj",
+        "projectPath": "/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Domain/ErrorLogger.Domain.csproj",
         "packagesPath": "/Users/mac/.nuget/packages/",
-        "outputPath": "/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Domain/obj/",
+        "outputPath": "/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/mac/.nuget/NuGet/NuGet.Config"
@@ -73,14 +73,14 @@
         }
       }
     },
-    "/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Infrastructure/ErrorLogger.Infrastructure.csproj": {
+    "/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Infrastructure/ErrorLogger.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Infrastructure/ErrorLogger.Infrastructure.csproj",
+        "projectUniqueName": "/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Infrastructure/ErrorLogger.Infrastructure.csproj",
         "projectName": "ErrorLogger.Infrastructure",
-        "projectPath": "/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Infrastructure/ErrorLogger.Infrastructure.csproj",
+        "projectPath": "/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Infrastructure/ErrorLogger.Infrastructure.csproj",
         "packagesPath": "/Users/mac/.nuget/packages/",
-        "outputPath": "/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Infrastructure/obj/",
+        "outputPath": "/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/mac/.nuget/NuGet/NuGet.Config"
@@ -95,8 +95,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Domain/ErrorLogger.Domain.csproj": {
-                "projectPath": "/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Domain/ErrorLogger.Domain.csproj"
+              "/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Domain/ErrorLogger.Domain.csproj": {
+                "projectPath": "/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Domain/ErrorLogger.Domain.csproj"
               }
             }
           }
@@ -120,6 +120,10 @@
             "AutoMapper": {
               "target": "Package",
               "version": "[14.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
             },
             "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",
@@ -154,14 +158,14 @@
         }
       }
     },
-    "/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/ErrorLogger.WebApi.csproj": {
+    "/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.WebApi/ErrorLogger.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/ErrorLogger.WebApi.csproj",
+        "projectUniqueName": "/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.WebApi/ErrorLogger.WebApi.csproj",
         "projectName": "ErrorLogger.WebApi",
-        "projectPath": "/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/ErrorLogger.WebApi.csproj",
+        "projectPath": "/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.WebApi/ErrorLogger.WebApi.csproj",
         "packagesPath": "/Users/mac/.nuget/packages/",
-        "outputPath": "/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/obj/",
+        "outputPath": "/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.WebApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/mac/.nuget/NuGet/NuGet.Config"
@@ -176,11 +180,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Domain/ErrorLogger.Domain.csproj": {
-                "projectPath": "/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Domain/ErrorLogger.Domain.csproj"
+              "/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Domain/ErrorLogger.Domain.csproj": {
+                "projectPath": "/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Domain/ErrorLogger.Domain.csproj"
               },
-              "/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Infrastructure/ErrorLogger.Infrastructure.csproj": {
-                "projectPath": "/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Infrastructure/ErrorLogger.Infrastructure.csproj"
+              "/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Infrastructure/ErrorLogger.Infrastructure.csproj": {
+                "projectPath": "/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Infrastructure/ErrorLogger.Infrastructure.csproj"
               }
             }
           }
@@ -208,6 +212,10 @@
             "MediatR": {
               "target": "Package",
               "version": "[12.5.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

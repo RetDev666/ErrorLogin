@@ -1,9 +1,9 @@
-using ErrorLogger.Domain.Models;
+using ErrorLogger.Domain.DTOs;
 using MediatR;
 
 namespace ErrorLogger.Domain.Queries
 {
-    public record GetErrorByIdQuery : IRequest<Error?>
+    public record GetErrorByIdQuery : IRequest<ErrorDto?>
     {
         public Guid Id { get; init; }
     }

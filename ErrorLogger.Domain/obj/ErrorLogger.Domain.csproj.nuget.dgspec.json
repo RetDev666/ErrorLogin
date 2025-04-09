@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Domain/ErrorLogger.Domain.csproj": {}
+    "/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Domain/ErrorLogger.Domain.csproj": {}
   },
   "projects": {
-    "/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Domain/ErrorLogger.Domain.csproj": {
+    "/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Domain/ErrorLogger.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Domain/ErrorLogger.Domain.csproj",
+        "projectUniqueName": "/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Domain/ErrorLogger.Domain.csproj",
         "projectName": "ErrorLogger.Domain",
-        "projectPath": "/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Domain/ErrorLogger.Domain.csproj",
+        "projectPath": "/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Domain/ErrorLogger.Domain.csproj",
         "packagesPath": "/Users/mac/.nuget/packages/",
-        "outputPath": "/Users/mac/RiderProjects/ErrorLogger/ErrorLogger.Domain/obj/",
+        "outputPath": "/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/mac/.nuget/NuGet/NuGet.Config"

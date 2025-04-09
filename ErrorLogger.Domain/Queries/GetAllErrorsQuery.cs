@@ -1,7 +1,7 @@
-using ErrorLogger.Domain.Models;
+using ErrorLogger.Domain.DTOs;
 using MediatR;
 
 namespace ErrorLogger.Domain.Queries
 {
-    public record GetAllErrorsQuery : IRequest<IEnumerable<Error>>;
+    public record GetAllErrorsQuery : IRequest<IEnumerable<ErrorDto>>;
 }
