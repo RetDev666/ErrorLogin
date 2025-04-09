@@ -1,10 +1,10 @@
 using Microsoft.OpenApi.Models;
 using ErrorLogger.Domain.Interfaces;
-using ErrorLogger.Domain.Commands;
 using ErrorLogger.Infrastructure.Services;
 using ErrorLogger.WebApi.Middleware;
 using System.Reflection;
-using ErrorLogger.Domain.Mappings;
+using ErrorLogger.Application.Commands;
+using ErrorLogger.Application.Mappings;
 using ErrorLogger.Infrastructure.Mappings;
 using ErrorLogger.WebApi.Mappings;
 using ErrorLogger.Infrastructure.Persistence;

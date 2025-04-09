@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.DataProtection;
 
-namespace ErrorLogger.Infrastructure.Services
+namespace ErrorLogger.Infrastructure.Tools
 {
     public static class TokenEncryptionHelper
     {

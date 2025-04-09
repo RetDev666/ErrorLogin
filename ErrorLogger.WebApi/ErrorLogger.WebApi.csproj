@@ -17,7 +17,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\ErrorLogger.Domain\ErrorLogger.Domain.csproj" />
+        <ProjectReference Include="..\ErrorLogger.Application\ErrorLogger.Application.csproj" />
         <ProjectReference Include="..\ErrorLogger.Infrastructure\ErrorLogger.Infrastructure.csproj" />
     </ItemGroup>
 </Project>

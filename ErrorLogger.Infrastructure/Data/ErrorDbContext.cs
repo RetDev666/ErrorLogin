@@ -1,4 +1,4 @@
-using ErrorLogger.Infrastructure.Entities;
+using ErrorLogger.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace ErrorLogger.Infrastructure.Data

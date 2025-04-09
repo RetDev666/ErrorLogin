@@ -1,4 +1,5 @@
-using ErrorLogger.Domain.Commands;
+using ErrorLogger.Application.Commands;
+using ErrorLogger.Application.Queries;
 using ErrorLogger.Domain.Models;
 using ErrorLogger.Domain.Queries;
 using MediatR;

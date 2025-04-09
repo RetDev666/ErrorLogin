@@ -16,7 +16,7 @@
             <param name="mediator">Медіатор для обробки команд</param>
             <param name="logger">Логер для реєстрації подій</param>
         </member>
-        <member name="M:ErrorLogger.WebApi.Controllers.ErrorsController.LogError(ErrorLogger.Domain.Commands.LogErrorCommand)">
+        <member name="M:ErrorLogger.WebApi.Controllers.ErrorsController.LogError(ErrorLogger.Application.Commands.LogErrorCommand)">
             <summary>
             Реєстрація нової помилки в системі
             </summary>

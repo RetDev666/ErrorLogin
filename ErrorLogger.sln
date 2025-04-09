@@ -1,12 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErrorLogger.WebApi", "ErrorLogger.WebApi\ErrorLogger.WebApi.csproj", "{FB7DB282-DE5F-4D21-BFFE-6ED20378F42F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{42809343-94F4-425A-8CBE-55E0ED6065FD} = {42809343-94F4-425A-8CBE-55E0ED6065FD}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ErrorLogger", "ErrorLogger", "{EC12E161-3B3F-406C-8AE7-606ED6361ED4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErrorLogger.Infrastructure", "ErrorLogger.Infrastructure\ErrorLogger.Infrastructure.csproj", "{3D882A09-A5E2-4F19-A241-EC0B369808B0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErrorLogger.Domain", "ErrorLogger.Domain\ErrorLogger.Domain.csproj", "{A2212767-BC25-41B3-8AAE-B2FAE8547BC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErrorLogger.Application", "ErrorLogger.Application\ErrorLogger.Application.csproj", "{42809343-94F4-425A-8CBE-55E0ED6065FD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A2212767-BC25-41B3-8AAE-B2FAE8547BC7} = {A2212767-BC25-41B3-8AAE-B2FAE8547BC7}
+		{3D882A09-A5E2-4F19-A241-EC0B369808B0} = {3D882A09-A5E2-4F19-A241-EC0B369808B0}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,10 +35,15 @@ Global
 		{A2212767-BC25-41B3-8AAE-B2FAE8547BC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2212767-BC25-41B3-8AAE-B2FAE8547BC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2212767-BC25-41B3-8AAE-B2FAE8547BC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42809343-94F4-425A-8CBE-55E0ED6065FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42809343-94F4-425A-8CBE-55E0ED6065FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42809343-94F4-425A-8CBE-55E0ED6065FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42809343-94F4-425A-8CBE-55E0ED6065FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FB7DB282-DE5F-4D21-BFFE-6ED20378F42F} = {EC12E161-3B3F-406C-8AE7-606ED6361ED4}
 		{3D882A09-A5E2-4F19-A241-EC0B369808B0} = {EC12E161-3B3F-406C-8AE7-606ED6361ED4}
 		{A2212767-BC25-41B3-8AAE-B2FAE8547BC7} = {EC12E161-3B3F-406C-8AE7-606ED6361ED4}
+		{42809343-94F4-425A-8CBE-55E0ED6065FD} = {EC12E161-3B3F-406C-8AE7-606ED6361ED4}
 	EndGlobalSection
 EndGlobal

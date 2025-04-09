@@ -1,5 +1,5 @@
 using AutoMapper;
-using ErrorLogger.Domain.DTOs;
+using ErrorLogger.Application.DTOs;
 using ErrorLogger.Domain.Models;
 
 

@@ -1,8 +1,8 @@
 using AutoMapper;
+using ErrorLogger.Domain.Entities;
 using ErrorLogger.Domain.Interfaces;
 using ErrorLogger.Domain.Models;
 using ErrorLogger.Infrastructure.Data;
-using ErrorLogger.Infrastructure.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 

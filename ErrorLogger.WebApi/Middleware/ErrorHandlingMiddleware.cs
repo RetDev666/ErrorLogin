@@ -1,6 +1,6 @@
 using System.Net;
 using System.Text.Json;
-using ErrorLogger.Domain.Commands;
+using ErrorLogger.Application.Commands;
 using MediatR;
 
 namespace ErrorLogger.WebApi.Middleware
