@@ -1184,6 +1184,21 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "ErrorLogger.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "AutoMapper": "14.0.0",
+          "ErrorLogger.Domain": "1.0.0",
+          "MediatR": "12.5.0"
+        },
+        "compile": {
+          "bin/placeholder/ErrorLogger.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ErrorLogger.Application.dll": {}
+        }
+      },
       "ErrorLogger.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -3440,6 +3455,11 @@
         "telegram.bot.nuspec"
       ]
     },
+    "ErrorLogger.Application/1.0.0": {
+      "type": "project",
+      "path": "../ErrorLogger.Application/ErrorLogger.Application.csproj",
+      "msbuildProject": "../ErrorLogger.Application/ErrorLogger.Application.csproj"
+    },
     "ErrorLogger.Domain/1.0.0": {
       "type": "project",
       "path": "../ErrorLogger.Domain/ErrorLogger.Domain.csproj",
@@ -3454,7 +3474,7 @@
   "projectFileDependencyGroups": {
     "net9.0": [
       "AutoMapper >= 14.0.0",
-      "ErrorLogger.Domain >= 1.0.0",
+      "ErrorLogger.Application >= 1.0.0",
       "ErrorLogger.Infrastructure >= 1.0.0",
       "MediatR >= 12.5.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.0",
@@ -3488,8 +3508,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Domain/ErrorLogger.Domain.csproj": {
-              "projectPath": "/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Domain/ErrorLogger.Domain.csproj"
+            "/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Application/ErrorLogger.Application.csproj": {
+              "projectPath": "/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Application/ErrorLogger.Application.csproj"
             },
             "/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Infrastructure/ErrorLogger.Infrastructure.csproj": {
               "projectPath": "/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Infrastructure/ErrorLogger.Infrastructure.csproj"

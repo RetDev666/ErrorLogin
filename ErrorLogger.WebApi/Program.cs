@@ -1,6 +1,7 @@
 
+using ErrorLogger.Infrastructure.Services;
 using ErrorLogger.WebApi;
-using ErrorLogger.Infrastructure.Tools;
+
 
 var builder = WebApplication.CreateBuilder(args);
 

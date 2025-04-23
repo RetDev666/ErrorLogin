@@ -1,5 +1,6 @@
-using ErrorLogger.Domain.Commands;
-using ErrorLogger.Domain.Models;
+using ErrorLogger.Application.Commands;
+using ErrorLogger.Application.Queries;
+using ErrorLogger.Domain.Entities;
 using ErrorLogger.Domain.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;

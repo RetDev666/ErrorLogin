@@ -1,6 +1,6 @@
 using AutoMapper;
-using ErrorLogger.Domain.DTOs;
-using ErrorLogger.Domain.Models;
+using ErrorLogger.Application.DTOs;
+using ErrorLogger.Domain.Entities;
 
 
 namespace ErrorLogger.WebApi.Mappings
