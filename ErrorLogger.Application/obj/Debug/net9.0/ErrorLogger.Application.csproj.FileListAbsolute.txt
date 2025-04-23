@@ -1,0 +1,16 @@
+/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Application/bin/Debug/net9.0/ErrorLogger.Application.deps.json
+/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Application/bin/Debug/net9.0/ErrorLogger.Application.dll
+/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Application/bin/Debug/net9.0/ErrorLogger.Application.pdb
+/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Application/bin/Debug/net9.0/ErrorLogger.Domain.dll
+/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Application/bin/Debug/net9.0/ErrorLogger.Domain.pdb
+/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Application/obj/Debug/net9.0/ErrorLogger.Application.csproj.AssemblyReference.cache
+/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Application/obj/Debug/net9.0/ErrorLogger.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Application/obj/Debug/net9.0/ErrorLogger.Application.AssemblyInfoInputs.cache
+/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Application/obj/Debug/net9.0/ErrorLogger.Application.AssemblyInfo.cs
+/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Application/obj/Debug/net9.0/ErrorLogger.Application.csproj.CoreCompileInputs.cache
+/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Application/obj/Debug/net9.0/ErrorLogger.Application.sourcelink.json
+/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Application/obj/Debug/net9.0/ErrorLog.1C69376F.Up2Date
+/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Application/obj/Debug/net9.0/ErrorLogger.Application.dll
+/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Application/obj/Debug/net9.0/refint/ErrorLogger.Application.dll
+/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Application/obj/Debug/net9.0/ErrorLogger.Application.pdb
+/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.Application/obj/Debug/net9.0/ref/ErrorLogger.Application.dll
