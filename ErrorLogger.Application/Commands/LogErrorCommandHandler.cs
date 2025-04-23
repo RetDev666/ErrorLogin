@@ -23,7 +23,6 @@ namespace ErrorLogger.Application.Commands
 
         public async Task<Guid> Handle(LogErrorCommand request, CancellationToken cancellationToken)
         {
-            // Використовуємо AutoMapper замість ручного маппінгу
             var error = mapper.Map<Error>(request);
 
             var errorId = await errorRepository.SaveErrorAsync(error, cancellationToken);

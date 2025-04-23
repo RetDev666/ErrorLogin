@@ -60,8 +60,7 @@ namespace ErrorLogger.Infrastructure.Services
                    $"\n*Час:* {error.Timestamp:yyyy-MM-dd HH:mm:ss}" +
                    $"\n*Код статусу:* {error.StatusCode}" +
                    $"\n*Джерело:* {error.Source}" +
-                   $"\n*Повідомлення:* {error.Message}" +
-                   (string.IsNullOrEmpty(error.StackTrace) ? "" : $"\n\n*Стек виклику:*\n```\n{error.StackTrace}\n```");
+                   $"\n*Повідомлення:* {error.Message}";
         }
     }
 }
