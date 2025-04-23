@@ -15,7 +15,6 @@ namespace ErrorLogger.WebApi.Mappings
                     opt.MapFrom(src => ParseErrorStatus(src.Status)))
                 .ForMember(dest => dest.Id, opt => opt.Ignore())
                 .ForMember(dest => dest.Message, opt => opt.Ignore())
-                .ForMember(dest => dest.StackTrace, opt => opt.Ignore())
                 .ForMember(dest => dest.Source, opt => opt.Ignore())
                 .ForMember(dest => dest.StatusCode, opt => opt.Ignore())
                 .ForMember(dest => dest.Timestamp, opt => opt.Ignore());
