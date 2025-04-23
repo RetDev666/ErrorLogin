@@ -45,7 +45,6 @@
 /Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/obj/Debug/net9.0/ErrorLogger.WebApi.xml
 /Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/bin/Debug/net9.0/appsettings.Encrypted.json
 /Users/mac/RiderProjects/ErrorLogger/ErrorLogger.WebApi/bin/Debug/net9.0/AutoMapper.dll
-/Users/mac/RiderProjects/ErrorLogin/ErrorLogger.WebApi/bin/Debug/net9.0/appsettings.Development.json
 /Users/mac/RiderProjects/ErrorLogin/ErrorLogger.WebApi/bin/Debug/net9.0/appsettings.json
 /Users/mac/RiderProjects/ErrorLogin/ErrorLogger.WebApi/bin/Debug/net9.0/ErrorLogger.WebApi.staticwebassets.endpoints.json
 /Users/mac/RiderProjects/ErrorLogin/ErrorLogger.WebApi/bin/Debug/net9.0/ErrorLogger.WebApi
