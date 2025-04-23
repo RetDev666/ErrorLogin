@@ -1,4 +1,4 @@
-namespace ErrorLogger.Domain.Models
+namespace ErrorLogger.Domain.Entities
 {
     public enum ErrorStatus
     {

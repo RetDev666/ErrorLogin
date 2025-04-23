@@ -1,5 +1,3 @@
-using ErrorLogger.Domain.Models;
-
 namespace ErrorLogger.Application.DTOs
 {
     public class ErrorDto

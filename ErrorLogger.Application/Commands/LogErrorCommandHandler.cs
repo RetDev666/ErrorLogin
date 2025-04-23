@@ -1,6 +1,6 @@
 using AutoMapper;
+using ErrorLogger.Domain.Entities;
 using ErrorLogger.Domain.Interfaces;
-using ErrorLogger.Domain.Models;
 using MediatR;
 
 namespace ErrorLogger.Application.Commands

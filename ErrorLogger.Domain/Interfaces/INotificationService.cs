@@ -1,4 +1,4 @@
-using ErrorLogger.Domain.Models;
+using ErrorLogger.Domain.Entities;
 
 namespace ErrorLogger.Domain.Interfaces
 {

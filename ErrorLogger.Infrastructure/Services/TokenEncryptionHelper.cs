@@ -3,7 +3,7 @@ using ErrorLogger.Infrastructure.Tools;
 
 namespace ErrorLogger.Infrastructure.Services
 {
-    public static partial class TokenEncryptionConsole
+    public static class TokenEncryptionConsole
     {
         public static void GenerateEncryptedTokensFromConfig(IConfiguration configuration)
         {

@@ -1,5 +1,5 @@
+using ErrorLogger.Domain.Entities;
 using ErrorLogger.Domain.Interfaces;
-using ErrorLogger.Domain.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Telegram.Bot;

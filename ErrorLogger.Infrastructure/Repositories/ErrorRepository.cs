@@ -1,5 +1,5 @@
+using ErrorLogger.Domain.Entities;
 using ErrorLogger.Domain.Interfaces;
-using ErrorLogger.Domain.Models;
 using Microsoft.Extensions.Logging;
 
 namespace ErrorLogger.Infrastructure.Repositories
@@ -13,41 +13,41 @@ namespace ErrorLogger.Infrastructure.Repositories
             this.logger = logger;
         }
         
-        public async Task<Guid> SaveErrorAsync(Error error, CancellationToken cancellationToken = default)
+        public Task<Guid> SaveErrorAsync(Error error, CancellationToken cancellationToken = default)
         {
             var id = Guid.NewGuid();
-            logger.LogInformation("Помилку збережено з ID: {ErrorId}", id);
-            return id;
+            logger.LogInformation("Помилка збережена з ідентифікатором: {ErrorId}", id);
+            return Task.FromResult(id);
         }
         
-        public async Task<Error?> GetErrorByIdAsync(Guid id, CancellationToken cancellationToken = default)
+        public Task<Error?> GetErrorByIdAsync(Guid id, CancellationToken cancellationToken = default)
         {
-            logger.LogInformation("Запит помилки за ID: {ErrorId}", id);
-            return null;
+            logger.LogInformation("Запит на помилку з ідентифікатором: {ErrorId}", id);
+            return Task.FromResult<Error?>(null);
         }
         
-        public async Task<IEnumerable<Error>> GetAllErrorsAsync(CancellationToken cancellationToken = default)
+        public Task<IEnumerable<Error>> GetAllErrorsAsync(CancellationToken cancellationToken = default)
         {
-            logger.LogInformation("Запит на отримання всіх помилок");
-            return new List<Error>();
+            logger.LogInformation("Запит на всі помилки");
+            return Task.FromResult<IEnumerable<Error>>(new List<Error>());
         }
         
-        public async Task<IEnumerable<Error>> GetErrorsByStatusAsync(ErrorStatus status, CancellationToken cancellationToken = default)
+        public Task<IEnumerable<Error>> GetErrorsByStatusAsync(ErrorStatus status, CancellationToken cancellationToken = default)
         {
-            logger.LogInformation("Запит помилок за статусом: {Status}", status);
-            return new List<Error>();
+            logger.LogInformation("Запит на помилки зі статусом: {Status}", status);
+            return Task.FromResult<IEnumerable<Error>>(new List<Error>());
         }
         
-        public async Task<bool> UpdateErrorStatusAsync(Guid id, ErrorStatus status, CancellationToken cancellationToken = default)
+        public Task<bool> UpdateErrorStatusAsync(Guid id, ErrorStatus status, CancellationToken cancellationToken = default)
         {
-            logger.LogInformation("Оновлено статус помилки ID {ErrorId} на {Status}", id, status);
-            return true;
+            logger.LogInformation("Оновлений статус помилки з ідентифікатором {ErrorId} до {Status}", id, status);
+            return Task.FromResult(true);
         }
         
-        public async Task<bool> DeleteErrorAsync(Guid id, CancellationToken cancellationToken = default)
+        public Task<bool> DeleteErrorAsync(Guid id, CancellationToken cancellationToken = default)
         {
-            logger.LogInformation("Видалено помилку з ID: {ErrorId}", id);
-            return true;
+            logger.LogInformation("Видалено помилку з ідентифікатором: {ErrorId}", id);
+            return Task.FromResult(true);
         }
     }
 }

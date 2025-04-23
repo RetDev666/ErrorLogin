@@ -10,10 +10,8 @@ namespace ErrorLogger.Infrastructure
     {
         public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
         {
-            // Реєстрація репозиторію помилок
             services.AddSingleton<IErrorRepository, InMemoryErrorRepository>();
             
-            // Реєстрація сервісу для відправлення повідомлень у Telegram
             services.AddSingleton<INotificationService, TelegramNotificationService>();
             
             return services;

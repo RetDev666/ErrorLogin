@@ -1,7 +1,7 @@
 using AutoMapper;
-using ErrorLogger.Domain.Models;
 using ErrorLogger.Application.Commands;
 using ErrorLogger.Application.DTOs;
+using ErrorLogger.Domain.Entities;
 
 namespace ErrorLogger.Application.Mappings
 {
