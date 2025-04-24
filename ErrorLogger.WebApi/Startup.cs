@@ -22,7 +22,6 @@ namespace ErrorLogger.WebApi
 
         public void ConfigureServices(IServiceCollection services)
         {
-            // Базові сервіси
             services.AddControllers();
             services.AddEndpointsApiExplorer();
 
@@ -35,8 +34,7 @@ namespace ErrorLogger.WebApi
                         .AllowAnyMethod();
                 });
             });
-
-            // Swagger
+            
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo 
@@ -50,8 +48,7 @@ namespace ErrorLogger.WebApi
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFilename);
                 c.IncludeXmlComments(xmlPath);
             });
-
-            // AutoMapper - реєструємо тільки один раз!
+            
             services.AddAutoMapper(config => 
             {
                 config.AddProfile<ErrorMapperProfile>();
@@ -59,28 +56,22 @@ namespace ErrorLogger.WebApi
                 config.AddProfile<InfrastructureMappingProfile>();
             });
             
-            // MediatR
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(
                 Assembly.GetExecutingAssembly(),
                 Assembly.GetAssembly(typeof(LogErrorCommand))
             ));
-
-            // Репозиторії та сервіси
-            // Змінено з ErrorRepository на InMemoryErrorRepository 
+            
             services.AddSingleton<IErrorRepository, InMemoryErrorRepository>();
             services.AddScoped<INotificationService, TelegramNotificationService>();
             
-            // DataProtection і безпека
             services.AddDataProtection();
             services.AddScoped<SecureTokenService>();
             
-            // Додавання логування
             services.AddLogging();
         }
 
         public void Configure(WebApplication app)
         {
-            // Налаштування для розробки
             if (app.Environment.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -92,14 +83,11 @@ namespace ErrorLogger.WebApi
                     c.DisplayRequestDuration();
                 });
             }
-
-            // CORS повинен бути перед маршрутизацією
+            
             app.UseCors();
             
-            // Обробка помилок
             app.UseMiddleware<ErrorHandlingMiddleware>();
-
-            // Базова маршрутизація
+            
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseAuthorization();

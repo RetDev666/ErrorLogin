@@ -9,7 +9,6 @@ namespace ErrorLogger.WebApi.Mappings
     {
         public ApiMappingProfile()
         {
-            // Для оновлення статусу
             CreateMap<UpdateErrorStatusDto, Error>()
                 .ForMember(dest => dest.Status, opt => 
                     opt.MapFrom(src => ParseErrorStatus(src.Status)))
@@ -26,8 +25,7 @@ namespace ErrorLogger.WebApi.Mappings
             {
                 return result;
             }
-            
-            // За замовчуванням повертаємо New, якщо не вдалося розпарсити
+
             return ErrorStatus.New;
         }
     }
